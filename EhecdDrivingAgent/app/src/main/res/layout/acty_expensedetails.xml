@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/include_titlebar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F7F7F7"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvMoney"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp150"
+                android:background="@color/white"
+                android:layout_margin="@dimen/dp15"
+                android:textSize="@dimen/sp13"
+                android:textColor="@color/black85"
+                android:gravity="center"
+                android:text="0.00元"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp13"
+                android:textColor="@color/black45"
+                android:gravity="center"
+                android:background="@color/white"
+                android:paddingTop="@dimen/dp15"
+                android:text="--费用明细--"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp45"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bk_bottom_bg_white"
+                android:paddingLeft="@dimen/dp15"
+                android:paddingRight="@dimen/dp15">
+                <TextView
+                    android:id="@+id/tvStart"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/sp13"
+                    android:textColor="@color/black60"
+                    android:text="起步价（公里）"/>
+                <TextView
+                    android:id="@+id/tvStartPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp13"
+                    android:textColor="@color/black85"
+                    android:text="0.00元"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp45"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bk_bottom_bg_white"
+                android:paddingLeft="@dimen/dp15"
+                android:paddingRight="@dimen/dp15">
+                <TextView
+                    android:id="@+id/tvLiCheng"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/sp13"
+                    android:textColor="@color/black60"
+                    android:text="里程费（0元/公里）"/>
+                <TextView
+                    android:id="@+id/tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp13"
+                    android:textColor="@color/black85"
+                    android:text="0.00元"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp45"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bk_bottom_bg_white"
+                android:paddingLeft="@dimen/dp15"
+                android:paddingRight="@dimen/dp15">
+                <TextView
+                    android:id="@+id/tvWaiting"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/sp13"
+                    android:textColor="@color/black60"
+                    android:text="等待费（0分0秒）"/>
+                <TextView
+                    android:id="@+id/tvWaitingPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp13"
+                    android:textColor="@color/black85"
+                    android:text="0.00元"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp45"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bk_bottom_bg_white"
+                android:paddingLeft="@dimen/dp15"
+                android:paddingRight="@dimen/dp15">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/sp13"
+                    android:textColor="@color/black60"
+                    android:text="雨天加价"/>
+                <TextView
+                    android:id="@+id/tvIncreasePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp13"
+                    android:textColor="@color/black85"
+                    android:text="0.00元"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp45"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bk_bottom_bg_white"
+                android:paddingLeft="@dimen/dp15"
+                android:paddingRight="@dimen/dp15">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/sp13"
+                    android:textColor="@color/black60"
+                    android:text="代驾抵扣券"/>
+                <TextView
+                    android:id="@+id/tvDeductionVoucher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp13"
+                    android:textColor="@color/black85"
+                    android:text="0.00元"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

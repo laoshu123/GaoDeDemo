@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.acty.TestAppBarLayoutActy"
+    tools:ignore="HardcodedText">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f7f7f7"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation="0px">
+
+        <com.ehecd.driving.widget.XCollapsingToolbarLayout
+            android:id="@+id/ctl_home_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/white"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:scrimVisibleHeightTrigger="100dp"
+            android:paddingBottom="@dimen/dp6">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F7F7F7">
+
+                <View
+                    android:id="@+id/vTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+
+                <ImageView
+                    android:id="@+id/i1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp160"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/icon_19"
+                    android:layout_below="@id/vTop"/>
+
+                <LinearLayout
+                    android:id="@+id/t1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp90"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/vTop">
+
+                    <TextView
+                        android:id="@+id/tvWithdrawMoney"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="5500.00元\n可提现收益"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp12" />
+
+                    <TextView
+                        android:id="@+id/tvMonthProfit"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="5500.00元\n本月收益"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp12" />
+
+                    <TextView
+                        android:id="@+id/tvYearProfit"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="5500.00元\n本年收益"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp12" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/t1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnWithdrawal"
+                        android:layout_width="@dimen/dp110"
+                        android:layout_height="@dimen/dp40"
+                        android:background="@drawable/selector_white_200"
+                        android:text="提现"
+                        android:textColor="@color/black65"
+                        android:textSize="@dimen/sp14" />
+
+                    <Button
+                        android:id="@+id/btnRecharge"
+                        android:layout_width="@dimen/dp110"
+                        android:layout_height="@dimen/dp40"
+                        android:layout_marginLeft="@dimen/dp30"
+                        android:background="@drawable/selector_white_200"
+                        android:text="充值"
+                        android:textColor="@color/black65"
+                        android:textSize="@dimen/sp14" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/t2"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/i1"
+                    android:layout_marginLeft="@dimen/dp15"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginRight="@dimen/dp15"
+                    android:background="@drawable/bian_kuang"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="1dp">
+
+                    <TextView
+                        android:id="@+id/tvProfitTotal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="5500.00元\n累计总收益"
+                        android:textColor="@color/black65"
+                        android:textSize="@dimen/sp12" />
+
+                    <TextView
+                        android:id="@+id/tvProfitYiTiXian"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="5500.00元\n已提现收益"
+                        android:textColor="@color/black65"
+                        android:textSize="@dimen/sp12" />
+
+                    <TextView
+                        android:id="@+id/tvProfitDongJie"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="5500.00元\n冻结中的收益"
+                        android:textColor="@color/black65"
+                        android:textSize="@dimen/sp12" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/tb_home_title"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+            <com.hjq.bar.TitleBar
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:layout_collapseMode="pin"
+                app:backButton="false">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <ImageView
+                        android:id="@+id/backAction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="@dimen/dp15"
+                        android:paddingRight="@dimen/dp15"
+                        android:src="@mipmap/iv_back" />
+
+                    <TextView
+                        android:id="@+id/tvTitleName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="标题"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </com.hjq.bar.TitleBar>
+
+        </com.ehecd.driving.widget.XCollapsingToolbarLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tl_home_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="@color/black"
+            app:tabIndicatorFullWidth="false"
+            app:tabMode="fixed"
+            app:tabRippleColor="@color/transparent"
+            app:tabSelectedTextColor="@color/black"
+            app:tabTextColor="@color/black45"
+            android:background="@drawable/bian_kuang_no_bottom"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_home_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bian_kuang"
+        android:padding="1dp"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">代驾</string>
+
+    <string name="common_loading">加载中&#8230;</string>
+    <string name="common_confirm">确定</string>
+    <string name="common_cancel">取消</string>
+</resources>

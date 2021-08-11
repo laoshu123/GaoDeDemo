@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lLayout_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/shape_white_10"
+    android:padding="@dimen/dp15"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp50"
+        android:src="@mipmap/icon_31"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp14"
+        android:textColor="@color/black85"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp10"
+        android:text="提现申请已提交请耐心等待"/>
+    <TextView
+        android:id="@+id/tvMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp14"
+        android:textColor="@color/black85"
+        android:gravity="center"
+        android:text="提现金额：500.00元"/>
+
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="@dimen/dp120"
+        android:layout_height="@dimen/dp45"
+        android:gravity="center"
+        android:textSize="@dimen/sp14"
+        android:textColor="@color/white"
+        android:background="@drawable/selector_login"
+        android:layout_marginTop="@dimen/dp15"
+        android:text="我知道了"/>
+
+
+
+</LinearLayout>

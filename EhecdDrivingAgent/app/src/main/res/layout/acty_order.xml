@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/include_titlebar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        android:background="#F7F7F7">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.amap.api.maps.MapView
+                android:id="@+id/mMapView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp260"/>
+
+            <LinearLayout
+                android:id="@+id/t1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_white_10"
+                android:layout_below="@id/mMapView"
+                android:layout_marginTop="-30dp"
+                android:layout_marginLeft="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp15"
+                android:padding="@dimen/dp15"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <View
+                        android:layout_width="@dimen/dp4"
+                        android:layout_height="@dimen/dp10"
+                        android:background="#4B4B5C"/>
+                    <TextView
+                        android:id="@+id/tvPayType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp13"
+                        android:textColor="@color/black85"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:text="已支付"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/dp6">
+                    <TextView
+                        android:id="@+id/tvOrderMoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp14"
+                        android:textStyle="bold"
+                        android:textColor="@color/black85"
+                        android:text="10000.00元"/>
+
+                    <TextView
+                        android:id="@+id/tvProfit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|right"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@mipmap/icon_right"
+                        android:textSize="@dimen/sp14"
+                        android:textStyle="bold"
+                        android:textColor="#BF2716"
+                        android:text="行程收益：800.00元"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/t2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_white_10"
+                android:layout_below="@id/t1"
+                android:layout_marginLeft="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp15"
+                android:paddingLeft="@dimen/dp15"
+                android:paddingRight="@dimen/dp15"
+                android:paddingTop="@dimen/dp15"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp10"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/tvLastNumber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/sp14"
+                        android:textStyle="bold"
+                        android:textColor="@color/black85"
+                        android:text="尾号 1234"/>
+                    <ImageView
+                        android:id="@+id/ivPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/icon_16_1"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvStartAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp13"
+                    android:textColor="@color/black85"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:drawableLeft="@mipmap/icon_12_1"
+                    android:drawablePadding="@dimen/dp5"
+                    android:text="开始位置"/>
+
+                <TextView
+                    android:id="@+id/tvEdnAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp13"
+                    android:textColor="@color/black85"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:drawableLeft="@mipmap/icon_12"
+                    android:drawablePadding="@dimen/dp5"
+                    android:text="目的地位置"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#F7F7F7"
+                    android:layout_marginTop="@dimen/dp15"/>
+
+                <Button
+                    android:id="@+id/btnPhone"
+                    android:layout_width="@dimen/dp90"
+                    android:layout_height="@dimen/dp35"
+                    android:background="@drawable/selector_login"
+                    android:textSize="@dimen/sp14"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:layout_marginBottom="@dimen/dp15"
+                    android:text="联系客服"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_white_10"
+                android:layout_below="@id/t2"
+                android:layout_marginLeft="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp15"
+                android:padding="@dimen/dp15"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <View
+                        android:layout_width="@dimen/dp4"
+                        android:layout_height="@dimen/dp10"
+                        android:background="#4B4B5C"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp13"
+                        android:textColor="@color/black85"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:text="行程录音"/>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp5"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

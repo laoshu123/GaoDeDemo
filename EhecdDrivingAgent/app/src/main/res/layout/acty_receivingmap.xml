@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/mMapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/swipe_right" />
+
+    <View
+        android:id="@+id/vTop"
+        android:layout_width="1dp"
+        android:layout_height="1dp" />
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vTop"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+        android:background="@drawable/shape_black_10"
+        android:padding="@dimen/dp15">
+
+        <TextView
+            android:id="@+id/tvNavigation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp15"
+            android:drawableTop="@mipmap/icon_33"
+            android:drawablePadding="@dimen/dp5"
+            android:gravity="center"
+            android:text="开始导航"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp12" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tvNavigation"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp12" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/swipe_right"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+        android:layout_marginBottom="@dimen/dp8"
+        android:background="@drawable/shape_white_10">
+
+        <TextView
+            android:id="@+id/tvState"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp45"
+            android:layout_marginLeft="@dimen/dp10"
+            android:gravity="center"
+            android:textColor="@color/black65"
+            android:textSize="@dimen/sp12" />
+
+        <TextView
+            android:id="@+id/tvMoreAction"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp45"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp10"
+            android:gravity="center"
+            android:text="更多操作>"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sp12" />
+
+        <View
+            android:id="@+id/t1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tvState"
+            android:background="#F7F7F7" />
+
+        <RelativeLayout
+            android:id="@+id/t2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_below="@id/t1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp10">
+
+            <TextView
+                android:id="@+id/tvPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp10"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp15"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvStartWait"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp22"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tvPhone"
+                android:background="@drawable/selector_login_blue"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingRight="@dimen/dp10"
+                android:text="开始等乘客"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp12"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvWaitTime"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp22"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tvPhone"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingRight="@dimen/dp10"
+                android:text="已等待客户5分35秒"
+                android:textColor="#FC4C25"
+                android:textSize="@dimen/sp12"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivPhoneAction"
+                android:layout_width="@dimen/dp50"
+                android:layout_height="@dimen/dp50"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:src="@mipmap/icon_16_1" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvStartAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/t2"
+            android:layout_marginLeft="@dimen/dp10"
+            android:drawableLeft="@mipmap/icon_12_1"
+            android:drawablePadding="@dimen/dp5"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/black65"
+            android:textSize="@dimen/sp12" />
+
+        <TextView
+            android:id="@+id/tvEndAddress"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp45"
+            android:layout_below="@id/tvStartAddress"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_toLeftOf="@id/tvChangeAction"
+            android:background="@null"
+            android:drawableLeft="@mipmap/icon_12"
+            android:drawablePadding="@dimen/dp5"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/black65"
+            android:textSize="@dimen/sp12" />
+
+        <TextView
+            android:id="@+id/tvChangeAction"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp45"
+            android:layout_below="@id/tvStartAddress"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingRight="@dimen/dp10"
+            android:text="修改"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sp12" />
+
+    </RelativeLayout>
+
+    <com.ehecd.driving.widget.SlideRightViewDragHelper
+        android:id="@+id/swipe_right"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#4A4C5B">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp10">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:src="@mipmap/icon_hright"
+                android:textColor="#FFFFFFFF" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="到达代驾起点"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp13"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="1000.00元"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp13"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+    </com.ehecd.driving.widget.SlideRightViewDragHelper>
+
+    <TextView
+        android:id="@+id/tvStartWait1"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp40"
+        android:layout_above="@id/swipe_right"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp20"
+        android:background="@drawable/selector_white_200"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15"
+        android:text="开始等待"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/sp13"
+        android:visibility="gone" />
+
+</RelativeLayout>

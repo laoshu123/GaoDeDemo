@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_gravity="center_horizontal|bottom"
+    android:orientation="vertical"
+    tools:context="com.ehecd.driving.ui.dialog.InputOrderDialog"
+    android:background="@drawable/shape_white_top_20">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:gravity="center|left"
+        android:textSize="@dimen/sp14"
+        android:textColor="@color/black65"
+        android:paddingLeft="@dimen/dp15"
+        android:text="余额充值"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15">
+
+        <TextView
+            android:id="@+id/tvOne"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp45"
+            android:layout_weight="1"
+            android:textSize="@dimen/sp12"
+            android:textColor="@color/black65"
+            android:gravity="center"
+            android:layout_margin="@dimen/dp15"
+            android:background="@drawable/selector_bk_white"
+            android:text="20"/>
+
+        <TextView
+            android:id="@+id/tvTwo"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp45"
+            android:layout_weight="1"
+            android:textSize="@dimen/sp12"
+            android:textColor="@color/black65"
+            android:gravity="center"
+            android:layout_margin="@dimen/dp15"
+            android:background="@drawable/selector_bk_white"
+            android:text="50"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15">
+
+        <TextView
+            android:id="@+id/tvThree"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp45"
+            android:layout_weight="1"
+            android:textSize="@dimen/sp12"
+            android:textColor="@color/black65"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:background="@drawable/selector_bk_white"
+            android:text="100"/>
+
+        <TextView
+            android:id="@+id/tvFour"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp45"
+            android:layout_weight="1"
+            android:textSize="@dimen/sp12"
+            android:textColor="@color/black65"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:background="@drawable/selector_bk_white"
+            android:text="200"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="@dimen/dp20" />
+</LinearLayout>

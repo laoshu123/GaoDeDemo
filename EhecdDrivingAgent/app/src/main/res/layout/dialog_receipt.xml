@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lLayout_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal|bottom"
+    android:orientation="vertical"
+    tools:context="com.ehecd.driving.ui.dialog.InputOrderDialog"
+    android:background="@drawable/shape_white_top_20"
+    android:paddingBottom="@dimen/dp15">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/dp30">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp13"
+            android:textStyle="bold"
+            android:text="历史订单"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp13"
+            android:textStyle="bold"
+            android:text="距离"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp13"
+            android:textStyle="bold"
+            android:text="全程"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/dp5">
+
+        <TextView
+            android:id="@+id/tvOrderNums"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/black85"
+            android:textSize="@dimen/sp13"
+            android:text="100单"/>
+
+        <TextView
+            android:id="@+id/tvDistance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/black85"
+            android:textSize="@dimen/sp13"
+            android:text="1公里"/>
+
+        <TextView
+            android:id="@+id/tvTotalDistance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/black85"
+            android:textSize="@dimen/sp13"
+            android:text="500公里"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp40">
+
+        <Button
+            android:id="@+id/btnRejection"
+            android:layout_width="@dimen/dp100"
+            android:layout_height="@dimen/dp35"
+            android:textColor="@color/black85"
+            android:textSize="@dimen/sp13"
+            android:background="@drawable/selector_cancel"
+            android:textStyle="bold"
+            android:text="拒单"/>
+
+        <Button
+            android:id="@+id/btnReceiving"
+            android:layout_width="@dimen/dp100"
+            android:layout_height="@dimen/dp35"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp13"
+            android:background="@drawable/selector_login"
+            android:layout_marginLeft="@dimen/dp60"
+            android:textStyle="bold"
+            android:text="接单"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp5">
+
+        <TextView
+            android:id="@+id/tvRejection"
+            android:layout_width="@dimen/dp100"
+            android:layout_height="wrap_content"
+            android:textColor="#804746"
+            android:textSize="@dimen/sp13"
+            android:gravity="center"
+            android:text="还有2次机会"/>
+
+        <TextView
+            android:id="@+id/tvReceiving"
+            android:layout_width="@dimen/dp100"
+            android:layout_height="wrap_content"
+            android:textColor="#804746"
+            android:textSize="@dimen/sp13"
+            android:layout_marginLeft="@dimen/dp60"
+            android:gravity="center"
+            android:text="3s后自动接单"/>
+    </LinearLayout>
+
+</LinearLayout>

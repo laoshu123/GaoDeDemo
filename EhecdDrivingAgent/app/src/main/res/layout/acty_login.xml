@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:gravity="center"
+        android:textSize="@dimen/sp16"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="登录"/>
+
+    <ImageView
+        android:id="@+id/t2"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp180"
+        android:layout_below="@id/t1"
+        android:src="@mipmap/icon_1"
+        android:layout_marginTop="@dimen/dp10"/>
+
+    <LinearLayout
+        android:id="@+id/t3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/t2"
+        android:layout_marginTop="@dimen/dp5"
+        android:paddingBottom="@dimen/dp50"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15"
+        android:layout_marginLeft="@dimen/dp50"
+        android:layout_marginRight="@dimen/dp50"
+        android:background="@mipmap/icon_5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp14"
+            android:gravity="center"
+            android:drawableLeft="@mipmap/icon_3"
+            android:drawablePadding="@dimen/dp5"
+            android:layout_marginTop="@dimen/dp70"
+            android:text="账号"/>
+
+        <com.ehecd.driving.widget.ClearEditText
+            android:id="@+id/cetPhone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:background="@drawable/bk_bottom_bg_white"
+            android:gravity="center"
+            android:textSize="@dimen/sp14"
+            android:textColor="@color/black65"
+            android:textColorHint="@color/hint"
+            android:hint="请填写登录账号"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp14"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp15"
+            android:drawableLeft="@mipmap/icon_4"
+            android:drawablePadding="@dimen/dp5"
+            android:text="密码"/>
+
+        <com.ehecd.driving.widget.ClearEditText
+            android:id="@+id/cetPwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:background="@drawable/bk_bottom_bg_white"
+            android:gravity="center"
+            android:textSize="@dimen/sp14"
+            android:textColor="@color/black65"
+            android:textColorHint="@color/hint"
+            android:inputType="textPassword"
+            android:hint="请填写登录密码"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="@dimen/dp100"
+        android:layout_height="@dimen/dp40"
+        android:background="@drawable/selector_login"
+        android:layout_below="@id/t3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-28dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp16"
+        android:text="登录"/>
+
+    <LinearLayout
+        android:id="@+id/t5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_below="@id/btnLogin"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginLeft="@dimen/dp40"
+        android:layout_marginRight="@dimen/dp40">
+        <TextView
+            android:id="@+id/tvAgree"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp30"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/sp12"
+            android:drawableLeft="@mipmap/icon_6"
+            android:drawablePadding="@dimen/dp5"
+            android:textColor="@color/black65"
+            android:text="已阅读并同意"/>
+
+        <TextView
+            android:id="@+id/tvUserAgreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp12"
+            android:textColor="#4689B2"
+            android:text="《用户协议》"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp12"
+            android:textColor="#4689B2"
+            android:text="及"/>
+
+        <TextView
+            android:id="@+id/tvPrivacypolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp12"
+            android:textColor="#4689B2"
+            android:text="《隐私政策》"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvRememberPpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp30"
+        android:textSize="@dimen/sp12"
+        android:textColor="@color/black65"
+        android:gravity="center_vertical"
+        android:text="记住密码"
+        android:layout_below="@id/t5"
+        android:layout_marginLeft="@dimen/dp40"
+        android:layout_marginRight="@dimen/dp40"
+        android:drawableLeft="@mipmap/icon_6"
+        android:drawablePadding="@dimen/dp5"
+        android:layout_marginTop="@dimen/dp5"/>
+
+</RelativeLayout>

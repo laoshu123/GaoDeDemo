@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#00000000">
+
+    <!--底部布局-->
+    <!--<ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:src="@mipmap/icon_hright"
+        android:textColor="#FFFFFFFF"
+        android:layout_marginLeft="10dp"
+        android:textSize="50dp" />-->
+
+    <!--要滑动的布局-->
+    <com.ehecd.driving.widget.SlideRightViewDragHelper
+        android:id="@+id/swipe_right"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <!--里边放你的布局,这里演示直接放一个图片-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:src="@mipmap/icon_hright"
+            android:textColor="#FFFFFFFF"
+            android:padding="10dp" />
+
+    </com.ehecd.driving.widget.SlideRightViewDragHelper>
+
+</FrameLayout>
